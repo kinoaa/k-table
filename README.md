@@ -3,8 +3,12 @@
 
 `我的博客有详细使用讲解`
 [https://juejin.cn/user/166781499739358/posts](table使用详细教程)
+
+![image](https://github.com/kinoaa/k-table/blob/main/k-table.png)
 # jsonView怎么使用
 引用组件传入json数据即可展示
+
+![image](https://github.com/kinoaa/k-table/blob/main/jsonView.png)
 ```vue
 <template>
   <div>
