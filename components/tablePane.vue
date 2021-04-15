@@ -121,7 +121,7 @@
       <el-pagination
         v-if="dataSource.pageData.total>0"
         :current-page="dataSource.pageData.pageNum"
-        :page-sizes="[5,10,15,20]"
+        :page-sizes="dataSource.pageData.pageSizes?dataSource.pageData.pageSizes:[5,10,15,20]"
         :page-size="dataSource.pageData.pageSize"
         layout="total, sizes, prev, pager, next, jumper"
         :total="dataSource.pageData.total"
@@ -145,14 +145,18 @@
 //            },
 //          ]
 //         data: [], // 表格数据
-//         cols: Cols, // 表格的列数据
+//         cols: [], // 表格的列数据
+//         handleSelectionChange:(val)=>{} //点击行选中多选返回选中数组
 //         isSelection: false, // 表格有多选时设置
 //         isOperation: true, // 表格有操作列时设置
 //         isIndex: true, // 列表序号
 //         loading: true, // loading
-//         total: 0, // 总条数
-//         pageSize: 10, // 每页数量
-//         pageNum: 1, // 页码
+//         pageData: {
+//          total: 0, // 总条数
+//          pageSize: 10, // 每页数量
+//          pageNum: 1, // 页码
+//          pageSize:[5,10,15,20]// 每页数量
+//         }
 //         operation: {
 //           // 表格有操作列时设置
 //           label: '操作', // 列名
