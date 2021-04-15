@@ -1,6 +1,9 @@
 # table怎么使用
 - 下载`ilterPane.vue`、 `tablePane.vue`
 - 引入使用`ilterPane.vue`、 `tablePane.vue`
+
+**`ilterPane.vue`、 `tablePane.vue`这两个文件内都有配置说明书！！！**
+**详细使用教程见[https://juejin.cn/user/166781499739358/posts](table使用详细使用教程)**
 ```js
 <template>
   <div class="app-container">
