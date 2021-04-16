@@ -2,8 +2,8 @@
 - 下载`ilterPane.vue`、 `tablePane.vue`
 - 引入使用`ilterPane.vue`、 `tablePane.vue`
 
-**`ilterPane.vue`、 `tablePane.vue`这两个文件内都有配置说明书！！！**
-**详细使用教程见[https://juejin.cn/user/166781499739358/posts](table使用详细使用教程)**
+**`filterPane.vue`、 `tablePane.vue`这两个文件内都有配置说明书！！！**
+**详细使用教程见[https://juejin.cn/post/6951564460964347912](table使用详细使用教程)**
 ```js
 <template>
   <div class="app-container">
@@ -102,61 +102,4 @@ export default {
 [https://juejin.cn/user/166781499739358/posts](table使用详细教程)
 
 ![image](https://github.com/kinoaa/k-table/blob/main/k-table.png)
-# jsonView怎么使用
-引用组件传入json数据即可展示
 
-![image](https://github.com/kinoaa/k-table/blob/main/jsonView.png)
-```vue
-<template>
-  <div>
-    <el-dialog :visible.sync="dialogViewCode" width="500px" title="详情" top="50px" :before-close="close" @close="onClose">
-      <Json-view :json="dialogViewCodeData" />
-      <div slot="footer">
-        <el-button type="primary" @click="close">确定</el-button>
-      </div>
-    </el-dialog>
-  </div>
-</template>
-<script>
-import JsonView from '@/components/JsonView'
-export default {
-  components: { JsonView },
-  props: {
-    dialogViewCode: {
-      type: Boolean,
-      default: false
-    },
-    dialogViewCodeData: {
-      type: Object,
-      default: () => {}
-    }
-  },
-  data() {
-    return {
-    }
-  },
-  watch: {
-    dialogViewUserData(val) {
-      if (val !== '') {
-        console.log(val)
-      }
-    }
-  },
-  methods: {
-    // 关闭dialog，重置数据
-    onClose() {
-      // this.$refs['addFrom'].resetFields()
-    },
-    // 关闭dialog
-    close() {
-      this.$emit('childMsg', { dialogViewCode: false })
-    }
-  }
-}
-</script>
-
-<style  scoped lang='scss'>
-
-</style>
-
-```
