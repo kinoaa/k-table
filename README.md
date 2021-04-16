@@ -1,6 +1,6 @@
 # table怎么使用
-- 下载`ilterPane.vue`、 `tablePane.vue`
-- 引入使用`ilterPane.vue`、 `tablePane.vue`
+- 下载`filterPane.vue`、 `tablePane.vue`
+- 引入使用`filterPane.vue`、 `tablePane.vue`
 
 **`filterPane.vue`、 `tablePane.vue`这两个文件内都有配置说明书！！！**
 
