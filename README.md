@@ -45,6 +45,13 @@
          data: [], // 表格数据
          cols: [], // 表格的列数据
          isSelection: false, // 表格有多选时设置
+         selectable: function(val) { // 禁用部分行多选
+          if (val.hideFlag === 1) {
+            return false
+          } else {
+            return true
+          }
+        },
          handleSelectionChange:(val)=>{} //点击行选中多选返回选中数组
          isOperation: true, // 表格有操作列时设置
          isIndex: true, // 列表序号
