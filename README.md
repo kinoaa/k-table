@@ -14,13 +14,15 @@
    elinput:[          
      {
        name:'姓名',    //提示语
-       key:'userName'  //字段名
+       key:'userName'，  //字段名
+       width:100
      }
    ],
    elselect:[
      {
        name:'部门',
-       key:'department'
+       key:'department',
+       width:100
        option:[{
          key:1,
          value:'技术部'
