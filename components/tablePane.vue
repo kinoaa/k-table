@@ -51,6 +51,17 @@
             <slot :name="item.prop" :scope="scope" />
           </template>
         </el-table-column>
+        //需要特殊颜色显示字体
+        <el-table-column
+          v-if="item.isSpecial"
+          :key="item.prop"
+          v-bind="item"
+          align="center"
+        >
+          <template slot-scope="scope">
+            <span :class="item.isSpecialClass(scope.row[scope.column.property])">{{ item.isSpecial(scope.row[scope.column.property]) }}</span>
+          </template>
+        </el-table-column>
         <!-- 图片带tooltip -->
         <el-table-column
           v-if="item.isImagePopover"
@@ -71,7 +82,7 @@
         </el-table-column>
         <!-- 大部分适用 -->
         <el-table-column
-          v-if="!item.isImagePopover && !item.isTemplate && !item.invisible&&!item.timeFormat"
+          v-if="!item.isImagePopover && !item.isTemplate && !item.isSpecial&&!item.timeFormat"
           :key="item.prop"
           v-bind="item.isCodeTableFormatter ? Object.assign({ formatter: item.isCodeTableFormatter }, item) : item"
           align="center"
