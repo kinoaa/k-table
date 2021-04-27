@@ -79,7 +79,92 @@
        },
 ```
 
-
+# tablePane.vue配置项Cols详解
+- 普通列
+```js
+cols:[
+   {
+       label: '标题',
+       prop: 'title',
+       width: 200
+    }
+]
+```
+- 普通列字体颜色改变
+```js
+cols:[
+  {
+    label: '状态',
+    prop: 'status',
+    isTemplate: function(val) {
+      if (val === 1) {
+        return '禁言中'
+      } else {
+        return '已解禁'
+      }
+    },
+    isTemplateClass: function(val) {
+      if (val === 1) {
+        return 'color-red'
+      } else {
+        return 'color-green'
+      }
+    }
+  }
+]
+```
+- 带filter过滤器列
+```js
+cols:[
+   {
+      label: '推送时间',
+      prop: 'pushTime',
+      isCodeTableFormatter: function(val) {
+        return timeFormat(val.pushTime)
+      }
+    },
+    {
+      label: '状态',
+      prop: 'status',
+      isCodeTableFormatter: function(val) {
+        if(val.status===1){
+          return '成功'
+        }else{
+          return '失败'
+        }
+      }
+    }
+]
+```
+- 带图标列
+```js
+cols:[
+  {
+     label: '目标类型',
+     prop: 'targetType',
+     isIcon: true,
+     filter: function(val) {
+       if (val === 4) {
+         return '特定用户'
+       } else if (val === 3) {
+         return '新注册用户'
+       } else if (val === 2) {
+         return '标签用户'
+       } else if (val === 1) {
+         return '全部用户'
+       }
+     },
+     icon: function(val) {
+       if (val === 4) {
+         return 'el-icon-mobile'
+       } else {
+         return false
+       }
+     },
+     handlerClick: this.handlerClick
+   }
+]
+```
 # 实战Demo
 ```js
 <template>
