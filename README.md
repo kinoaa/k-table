@@ -165,6 +165,34 @@ cols:[
    }
 ]
 ```
+ # 操作列按钮配置详解 operation
+  - 类型         *`Object`*
+ - 默认值       **`{ }`**
+ 配置操作列
+  ```js
+  dataSource: {
+         operation: {
+           // 表格有操作列时设置
+           label: '操作', // 列名
+           width: '350', // 根据实际情况给宽度
+           data: [
+             {
+               label: '修改', // 操作名称
+               permission:'1001' //权限点
+               type: 'info', //按钮类型
+               handleRow: function(){} // 自定义事件
+             },
+             {
+               label: '修改', // 操作名称
+               permission:'1001' //权限点
+               type: 'icon', //按钮类型icon为图表类型
+               icon:'el-icon-plus'
+               handleRow: function(){} // 自定义事件
+             }
+           ]
+         }
+  }
+ ```
 # 实战Demo
 ```js
 <template>
