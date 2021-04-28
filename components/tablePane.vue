@@ -136,7 +136,7 @@
                   </el-button>
                 </template>
                 <template v-else>
-                  <i class="icon el-icon-plus" v-bind="item" @click="item.handleRow(scope.$index, scope.row, item.label)" />
+                  <i :class="[icon,item.icon]" v-bind="item" @click="item.handleRow(scope.$index, scope.row, item.label)" />
                 </template>
               </div>
             </div>
