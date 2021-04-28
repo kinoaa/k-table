@@ -51,7 +51,7 @@
             <slot :name="item.prop" :scope="scope" />
           </template>
         </el-table-column>
-        //需要特殊颜色显示字体
+        <!-- 需要特殊颜色显示字体-->
         <el-table-column
           v-if="item.isSpecial"
           :key="item.prop"
@@ -62,7 +62,7 @@
             <span :class="item.isSpecialClass(scope.row[scope.column.property])">{{ item.isSpecial(scope.row[scope.column.property]) }}</span>
           </template>
         </el-table-column>
-        //需要带图标的某列，带回调事件
+        <!-- 需要带图标的某列，带回调事件-->
         <el-table-column
           v-if="item.isIcon"
           :key="item.prop"
