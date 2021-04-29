@@ -36,7 +36,7 @@
             v-for="i in item.option"
             :key="i.key"
             :label="i.value"
-            :value="i.value"
+            :value="i.key"
           />
         </el-select>
       </template>
