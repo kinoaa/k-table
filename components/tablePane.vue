@@ -16,6 +16,7 @@
     <el-table
       ref="table"
       v-loading="dataSource.loading"
+      :border="dataSource.border?true:false"
       style="width: 100%;"
       :class="{ 'no-data': !dataSource.data || !dataSource.data.length }"
       :data="dataSource.data"
