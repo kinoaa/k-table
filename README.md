@@ -36,6 +36,7 @@
 # tablePane.vue配置项概览
 ```js
   dataSource: {
+          border：true,//可选项，为true可拖动列
           tool:[
             {
               name: '新增用户', //按钮名称
