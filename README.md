@@ -1,5 +1,6 @@
 # table怎么使用
 
+
 1. 下载`filterPane.vue`、 `tablePane.vue`
 
 2. 引入使用`filterPane.vue`、 `tablePane.vue`
@@ -169,6 +170,7 @@ cols:[
 ]
 ```
  # 操作列按钮配置详解 operation
+ 
   - 类型         *`Object`*
  - 默认值       **`{ }`**
  配置操作列
