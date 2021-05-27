@@ -1,4 +1,4 @@
-# table怎么使用
+# k-table怎么使用
 
 
 1. 下载`filterPane.vue`、 `tablePane.vue`
