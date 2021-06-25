@@ -455,6 +455,7 @@ export default {
 对element.ui的table组件进行二次封装，1分钟实现一个表格页面，最少的代码做最多的事
 
 **我的博客有详细使用讲解以及细节梳理**
+
 [table使用详细教程](https://juejin.cn/post/6951564460964347912)
 
 ![image](https://github.com/kinoaa/k-table/blob/main/k-table.png)
